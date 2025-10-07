@@ -1,0 +1,189 @@
+body {
+  background-color: green;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#table {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cards img {
+  width: 80px;
+  height: auto;
+  border-radius: 5px;
+}
+
+#controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#deck-info {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.pile-img {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#deck-count, #discard-count {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+#players-area {
+  display: flex;          /* Flex layout for players */
+  gap: 20px;              /* Space between players */
+  justify-content: center; /* Center players horizontally */
+  flex-wrap: wrap;        /* Wrap to next line if too many players */
+  margin-top: 20px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column; /* Stack cards and info vertically */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3); /* optional styling */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.you-player {
+  background-color: rgba(0, 0, 0, 0.3);  
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 235, 59, 0.5); /* glow effect */
+}
+
+.you-player h2{
+  color: yellow;
+}
+
+.player.choosing {
+  background-color: rgba(255, 255, 0, 0.2);
+  box-shadow: 0 0 20px darkgreen;
+  transform: scale(1.05);
+}
+
+#host-settings input, #host-settings select, #host-settings button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+#host-settings button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+#host-settings button:hover {
+  background-color: #45a049;
+}
+
+.player-ready-timer {
+  background-color: rgba(255,255,255,0.2);
+  margin: 5px auto;
+  width: 200px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  padding: 3px;
+}
+
+.player-ready-timer .timer-bar {
+  background-color: limegreen;
+  height: 8px;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 3px;
+  transition: width 0.5s linear;
+}
+
+.player-ready-timer span {
+  color: white;
+  font-size: 14px;
+}
+
+
+/* Toggle Button*/
+.toggle-switch {
+  display: inline-flex;       /* inline container */
+  align-items: center;        /* vertically center slider and text */
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hide default checkbox */
+.toggle-switch input {
+  display: none;
+}
+
+/* Slider background */
+.slider {
+  position: relative;
+  width: 40px;    /* slider width */
+  height: 20px;   /* slider height */
+  background-color: #ccc;
+  border-radius: 20px;
+  margin-right: 8px;
+  transition: 0.3s;
+}
+
+/* Circle inside slider */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* Checked state */
+.toggle-switch input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+/* Label text */
+.label-text {
+  font-size: 14px;
+  color: white;
+}
+
+/*END of Toggle Button*/
